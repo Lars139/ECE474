@@ -1,0 +1,37 @@
+module shift_reg(input clk_50, 
+	input reset_n,
+	input serial_data,
+	input data_ena,
+	output to_fifo_data);
+
+reg [7:0] ff;
+//int i;  //for for-loop
+
+always_ff @ (posedge clk, negedge reset_n)
+if(!reset) begin
+	ff = '0;
+end //end (!reset) 
+else begin
+	if(data_en) begin
+		ff[7] <= serial_data;
+		ff[6] <= ff[7];
+		ff[5] <= ff[6];
+		ff[4] <= ff[5];
+		ff[3] <= ff[4];
+		ff[2] <= ff[3];
+		ff[1] <= ff[2];
+		ff[0] <= ff[1];
+		/*
+		ff[7] <= serial_data;
+		for(int i = 7; i > 0 ; i) begin
+			ff[i-1] <= ff[i];
+		end
+		*/
+
+	end //end (data_en)
+end //end else
+
+assign to_fifo_data <= ff;
+	
+endmodule
+

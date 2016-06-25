@@ -1,0 +1,39 @@
+#shorteded synopsys synthesis script
+#run like this:  dc_shell-xg-t -f dc_syn1
+#area of 2 input NAND is 5.5 um^2 to compute gate count
+#
+#
+#boilerplate
+set hdlin_auto_save_templates true
+set hdlin_check_no_latch      true
+
+read_sverilog  rtl_src/digit_sel_module.sv
+read_sverilog  rtl_src/hr_cntr_module.sv
+read_sverilog  rtl_src/min_cntr_module.sv
+read_sverilog  rtl_src/sec_cntr_module.sv
+read_sverilog  rtl_src/seven_seg_dec_module.sv
+read_sverilog  rtl_src/clock_module.sv
+
+current_design clock 
+link
+
+##### constraints are below #####
+
+#erase all attributes and constrains from the current design
+reset_design
+set_operating_conditions -max TYPICAL
+compile -ungroup_all
+
+# Make sure we are at the top level
+set current_design clock 
+# Creating timing
+report_timing >> results
+# Generate area report 
+report_area  >> results 
+# Find what cells were used 
+report_hierarchy -full -nosplit  >> results   
+
+# Generating gate file
+write -format verilog -hierarchy -output clock.gate.v
+
+quit

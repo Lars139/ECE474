@@ -1,0 +1,27 @@
+#!/bin/bash
+#captured from transcript
+
+#PROJECT=474_clock
+#TOP_LEVEL_FILE=newtop 
+#FAMILY="Cyclone IV"
+#PART="EP4CE22F17C6"
+
+#PACKING_OPTION=minimize_area
+
+quartus_map --read_settings_files=on --write_settings_files=off \
+	    --source=digit_sel_module.sv \
+            --source=debouncer.sv \
+	    --source=sec_cntr_module.sv \
+	    --source=min_cntr_module.sv \
+            --source=hr_cntr_module.sv \
+            --source=newpll.v \
+            --source=seven_seg_dec_module.sv \
+            --source=clock_module.sv \
+            --source=top.sv  \
+              top -c top
+quartus_fit --read_settings_files=off --write_settings_files=off top -c top
+quartus_asm --read_settings_files=off --write_settings_files=off top -c top
+#quartus_sta top -c top
+quartus_pgm -c USB-Blaster -m JTAG -o "p;output_files/top.sof"
+#quartus_eda --read_settings_files=off --write_settings_files=off top -c top
+

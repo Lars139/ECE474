@@ -1,0 +1,137 @@
+
+ [1;34mChecking the source files... [0m
+ Source File Exist:  seven_seg_dec_module.sv
+ Source File Exist:  digit_sel_module.sv
+ Source File Exist:  hr_cntr_module.sv
+ Source File Exist:  min_cntr_module.sv
+ Source File Exist:  sec_cntr_module.sv
+ Source File Exist:  clock_module.sv
+ Source File Exist:  tb.sv
+
+ [1;34mCompiling at RTL level: seven_seg_dec_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:46 on Apr 21,2016
+vlog ./rtl_src/seven_seg_dec_module.sv 
+-- Compiling module seven_seg_dec
+
+Top level modules:
+	seven_seg_dec
+End time: 13:44:47 on Apr 21,2016, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: digit_sel_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:47 on Apr 21,2016
+vlog ./rtl_src/digit_sel_module.sv 
+-- Compiling module digit_sel
+
+Top level modules:
+	digit_sel
+End time: 13:44:47 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: hr_cntr_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:47 on Apr 21,2016
+vlog ./rtl_src/hr_cntr_module.sv 
+-- Compiling module hr_cntr
+
+Top level modules:
+	hr_cntr
+End time: 13:44:47 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: min_cntr_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:47 on Apr 21,2016
+vlog ./rtl_src/min_cntr_module.sv 
+-- Compiling module min_cntr
+
+Top level modules:
+	min_cntr
+End time: 13:44:47 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: sec_cntr_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:47 on Apr 21,2016
+vlog ./rtl_src/sec_cntr_module.sv 
+-- Compiling module sec_cntr
+
+Top level modules:
+	sec_cntr
+End time: 13:44:47 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: clock_module.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:48 on Apr 21,2016
+vlog ./rtl_src/clock_module.sv 
+-- Compiling module clock
+
+Top level modules:
+	clock
+End time: 13:44:48 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at RTL level: tb.sv... [0m
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 12 2016
+Start time: 13:44:48 on Apr 21,2016
+vlog ./rtl_src/tb.sv 
+-- Compiling module tb
+
+Top level modules:
+	tb
+End time: 13:44:48 on Apr 21,2016, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling at Gate level... [0m
+
+
+____________________________________________________________________________
+
+
+
+
+____________________________________________________________________________
+
+
+
+______________________________END OF RUN____________________________________
+
+

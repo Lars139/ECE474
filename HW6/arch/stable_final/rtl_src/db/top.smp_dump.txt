@@ -1,0 +1,9 @@
+
+State Machine - |top|clock:clock_inst0|digit_sel:digit_sel_0|ds_ps
+Name ds_ps.ds_dg1 ds_ps.ds_dg4 ds_ps.ds_dg3 ds_ps.ds_col ds_ps.ds_dg2 ds_ps.ds_df 
+ds_ps.ds_df 0 0 0 0 0 0 
+ds_ps.ds_dg2 0 0 0 0 1 1 
+ds_ps.ds_col 0 0 0 1 0 1 
+ds_ps.ds_dg3 0 0 1 0 0 1 
+ds_ps.ds_dg4 0 1 0 0 0 1 
+ds_ps.ds_dg1 1 0 0 0 0 1 

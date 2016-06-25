@@ -1,0 +1,907 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:12:18 2015
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:12:18 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:21:50 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:21:50 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:21:50 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:23:52 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:23:52 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 01:23:52 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:47:26 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:47:27 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:47:27 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : seven_seg_dec
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:50:01 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: dec_7seg[2]
+              (input port)
+  Endpoint: segment_data[6]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  seven_seg_dec      ForQA                 saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  dec_7seg[2] (in)                         0.00       0.00 f
+  U49/QN (INVX0)                           4.17       4.17 r
+  U47/QN (NAND3X0)                         5.39       9.57 f
+  U46/Q (OA21X1)                           1.16      10.73 f
+  U42/QN (OAI221X1)                        0.63      11.36 r
+  segment_data[6] (out)                    0.00      11.36 r
+  data arrival time                                  11.36
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : seven_seg_dec
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:50:01 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           11
+Number of nets:                            27
+Number of cells:                           23
+Number of combinational cells:             23
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          4
+Number of references:                       9
+
+Combinational area:        172.743999
+Noncombinational area:       0.000000
+Net Interconnect area:       6.379132  
+
+Total cell area:           172.743999
+Total area:                179.123132
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : seven_seg_dec
+Version: E-2010.12-SP2
+Date   : Fri Jun  5 10:50:01 2015
+****************************************
+
+seven_seg_dec
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    INVX0            saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Jun  8 00:07:58 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Jun  8 00:07:58 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Jun  8 00:07:58 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Jul  1 11:18:47 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Jul  1 11:18:47 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Jul  1 11:18:47 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Dec  2 18:41:06 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Dec  2 18:41:06 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Wed Dec  2 18:41:06 2015
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Apr 18 12:46:28 2016
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: digit_sel_0/b_dec_7seg_reg[1]
+              (positive level-sensitive latch)
+  Endpoint: segment_data[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  clock              8000                  saed90nm_typ
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  digit_sel_0/b_dec_7seg_reg[1]/CLK (LATCHX1)             0.00       0.00 r
+  digit_sel_0/b_dec_7seg_reg[1]/Q (LATCHX1)               0.23       0.23 r
+  U24/QN (NAND2X0)                                        0.18       0.41 f
+  U22/Q (AND3X1)                                          0.15       0.57 f
+  U13/QN (OAI21X1)                                        0.14       0.70 r
+  segment_data[3] (out)                                   0.00       0.70 r
+  data arrival time                                                  0.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Apr 18 12:46:28 2016
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           14
+Number of nets:                           241
+Number of cells:                          205
+Number of combinational cells:            177
+Number of sequential cells:                28
+Number of macros:                           0
+Number of buf/inv:                         21
+Number of references:                      27
+
+Combinational area:       1549.672995
+Noncombinational area:     829.436008
+Net Interconnect area:     105.144101  
+
+Total cell area:          2379.109004
+Total area:               2484.253104
+1
+ 
+****************************************
+Report : hierarchy
+        -full
+Design : clock
+Version: E-2010.12-SP2
+Date   : Mon Apr 18 12:46:28 2016
+****************************************
+
+clock
+    AND2X1           saed90nm_typ
+    AND3X1           saed90nm_typ
+    AO21X1           saed90nm_typ
+    AO22X1           saed90nm_typ
+    AO221X1          saed90nm_typ
+    AOI21X1          saed90nm_typ
+    AOI222X1         saed90nm_typ
+    DFFARX1          saed90nm_typ
+    DFFASX1          saed90nm_typ
+    HADDX1           saed90nm_typ
+    INVX0            saed90nm_typ
+    LATCHX1          saed90nm_typ
+    MUX21X1          saed90nm_typ
+    NAND2X0          saed90nm_typ
+    NAND3X0          saed90nm_typ
+    NAND4X0          saed90nm_typ
+    NOR2X0           saed90nm_typ
+    NOR3X0           saed90nm_typ
+    NOR4X0           saed90nm_typ
+    OA21X1           saed90nm_typ
+    OAI21X1          saed90nm_typ
+    OAI221X1         saed90nm_typ
+    OR2X1            saed90nm_typ
+    OR3X1            saed90nm_typ
+    XNOR2X1          saed90nm_typ
+    XOR2X1           saed90nm_typ
+    XOR3X1           saed90nm_typ
+1

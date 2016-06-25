@@ -1,0 +1,30 @@
+HW5: Basic concept
+
+Goal: We want to design a RECEIVER for a satellite communication. (Assuming no packet loss via communication channel)
+
+Background: 
+We have satellite orbiting a planet with a built in transceiver.  
+The satellite orbits around the planet reading 4 different temperature values (4 distinct bytes)
+and sends the temperature value to the receiver via serial communication.
+
+The serial communication uses a basic format at 50MHz:
+{HEARDER || TEMP1 || TEMP2 || TEMP3 || TEMP4 || Header_of_the_next_packet .....}
+	HEADER - The header of the packet: 
+		If the header has the value of 0xA5 or 0xC3, the follow next 4 bytes are the temperature values
+		If the header has the value of 0x57 or 0xC5, ignore the rest of the packet until it sees the next header
+	
+	TEMPx - the recorded temperature values which can have the value range from [0,127]
+	
+Note: The serial communication allows fragmented packet communication. 
+Meaning:
+ {HEADER || TEMP1 || .... wait .... || TEMP2 || TEMP3 || TEMP4 || ....}
+ OR
+ {HEADER || ... wait ... || TEMP1 || TEMP2 || TEMP3 || TEMP4 || ...}
+are valid communication.  (Given there is no packet loss) 
+
+Homework Problem:
+	Design a receiver for the satellite communication which will find the average value of the temperature and store the avg value in RAM. 
+
+Remark: RAM operates on 2MHz clock signal. 
+	
+

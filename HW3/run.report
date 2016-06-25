@@ -1,0 +1,46 @@
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module updn_cntr
+
+Top level modules:
+	updn_cntr
+
+
+____________________________________________________________________________
+
+
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+
+____________________________________________________________________________
+
+
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do dofile.do -c -quiet -t 1ps tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.23.4.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do dofile.do 
+
+
+____________________________________________________________________________
+
+
+
+______________________________END OF RUN____________________________________
+
+

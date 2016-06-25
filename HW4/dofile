@@ -1,0 +1,4 @@
+view signals
+add wave -r /*
+run 200000
+quit

@@ -1,0 +1,7 @@
+read_sverilog ./rtl_src/alu.sv
+compile
+report_timing
+report_area   
+write -format verilog -hierarchy -output alu.gate.v
+write list alu_gate.list
+quit

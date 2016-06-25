@@ -1,0 +1,90 @@
+#ynopsys synthesis script
+
+#boilerplate
+set hdlin_auto_save_templates true
+set hdlin_check_no_latch      true
+
+read_sverilog  rtl_src/cnt_dwn_11_bit.sv
+read_sverilog  rtl_src/ctrl_2mhz.sv  
+read_sverilog  rtl_src/ctrl_50mhz.sv  
+read_sverilog  rtl_src/averager.sv   
+read_sverilog  rtl_src/fifo.sv  
+read_sverilog  rtl_src/shift_reg.sv  
+read_sverilog  rtl_src/tas.sv  
+
+current_design tas 
+link
+
+##### constraints are below #####
+
+#erase all attributes and constrains from the current design
+reset_design
+
+set_operating_conditions -max TYPICAL
+
+#set wire loading model to 8000
+set_wire_load_model -name 8000  
+
+#set wire loading mode to top  
+set_wire_load_mode top 
+
+# Define the clock period and clock port (5ns clock period)
+create_clock -period 20  -name my_clock  [get_ports clk_50]
+create_clock -period 500 -name my_clock1 [get_ports clk_2]
+
+# Set the clock uncertainty to +/- 20pS
+set_clock_uncertainty -setup .020 [get_clocks my_clock]
+set_clock_uncertainty -hold  .020 [get_clocks my_clock]
+
+set_clock_uncertainty -setup .020 [get_clocks my_clock1]
+set_clock_uncertainty -hold  .020 [get_clocks my_clock1]
+
+# set the "input valid" delay to 2.0nS
+set_input_delay  2.0 -max -clock my_clock [remove_from_collection [all_inputs] [get_ports clk_50 ]]
+
+# set the setup time requirements for the next block to 2nS
+set_output_delay 2.0 -max -clock my_clock1 [all_outputs]
+
+#set the fastest input data arrival time to check for hold time changes to 100pS
+set_input_delay -min 0.100 -clock my_clock [remove_from_collection [all_inputs] [get_ports clk_50 ]]
+
+# set the hold time requirements for the next block to 150pS
+set_output_delay -min -0.150  -clock my_clock1 [all_outputs]
+
+# Indicate the drive characteristics of what drives the inputs:
+set_driving_cell -lib_cell SDFFARX1  [remove_from_collection [all_inputs] [get_ports clk_50]]
+
+# Indicate the capacitive loading on the outputs equal to 5 inv_2 inverter inputs
+set_load [expr 5 * [load_of saed90nm_typ/AND2X1/IN1]] [all_outputs]
+
+#change_names -rules "MYrules" -hierarchy
+
+#change_names -rules verilog -hierarchy
+#change_names -rules vhdl  -hierarchy
+
+# Compile with completely disolved design
+# Scan ready compile
+compile -ungroup_all
+
+# Make sure we are at the top level
+set current_design  tas 
+
+# Generate area and constraints reports on the optimized design
+report_area    > reports/area.rpt
+
+# Generate timing report for worst case path
+report_timing  > reports/delay.rpt
+
+# Generate timing report for hold time 
+report_timing -delay min  > reports/hold_error.rpt 
+
+# Find what cells were used to check for latches
+report_hierarchy -full  -nosplit  > reports/cells_used.rpt
+
+#run a design check
+check_design > reports/check_deisgn.rpt
+
+# Save the optimized design
+write -format verilog -hierarchy -output  vlogout/tas.gate.v
+write_sdf sdfout/tas.gate.sdf -context verilog
+quit

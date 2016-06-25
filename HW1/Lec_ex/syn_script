@@ -1,0 +1,6 @@
+read_sverilog fadder.sv
+compile
+report_timing
+report_area   
+write -format verilog -hierarchy -output fadder.gate.v
+#quit!

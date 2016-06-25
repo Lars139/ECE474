@@ -1,0 +1,300 @@
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do temp_trans.do -c -quiet -t 1ps adder8 
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do temp_trans.do 
+# Missing signal name or pattern
+
+
+____________________________________________________________________________
+
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+           Version E-2010.12-SP2 for linux -- Feb 25, 2011
+               Copyright (c) 1988-2011 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+read_sverilog fadder.sv 
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/gtech.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Loading sverilog file '/nfs/stak/students/s/sawaspar/ECE474/HW1/fadder.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /nfs/stak/students/s/sawaspar/ECE474/HW1/fadder.sv
+Presto compilation completed successfully.
+Current design is now '/nfs/stak/students/s/sawaspar/ECE474/HW1/fadder.db:fadder'
+Loaded 1 design.
+Current design is 'fadder'.
+fadder
+read_sverilog adder8.sv
+Loading sverilog file '/nfs/stak/students/s/sawaspar/ECE474/HW1/adder8.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /nfs/stak/students/s/sawaspar/ECE474/HW1/adder8.sv
+Warning:  /nfs/stak/students/s/sawaspar/ECE474/HW1/adder8.sv:17: the undeclared symbol 'x' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Current design is now '/nfs/stak/students/s/sawaspar/ECE474/HW1/adder8.db:adder8'
+Loaded 1 design.
+Current design is 'adder8'.
+adder8
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | E-2010.12-DWBB_201012.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fadder_0'
+  Processing 'adder8'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'adder8' has no optimization constraints set. (OPT-108)
+Information: Total 0 isolation cells are inserted. (UPF-214)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'fadder_7'
+  Mapping 'fadder_7'
+  Structuring 'fadder_6'
+  Mapping 'fadder_6'
+  Structuring 'fadder_5'
+  Mapping 'fadder_5'
+  Structuring 'fadder_4'
+  Mapping 'fadder_4'
+  Structuring 'fadder_3'
+  Mapping 'fadder_3'
+  Structuring 'fadder_2'
+  Mapping 'fadder_2'
+  Structuring 'fadder_1'
+  Mapping 'fadder_1'
+  Structuring 'fadder_0'
+  Mapping 'fadder_0'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+    0:00:01     327.2      0.00       0.0       0.0                          
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+
+  Optimization Complete
+  ---------------------
+1
+report_timing
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : adder8
+Version: E-2010.12-SP2
+Date   : Wed Apr 15 16:09:47 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: b[0] (input port)
+  Endpoint: sum_out[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  adder8             8000                  saed90nm_typ
+  fadder_0           ForQA                 saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  b[0] (in)                                0.00       0.00 f
+  adder_0/b (fadder_0)                     0.00       0.00 f
+  adder_0/U3/Q (XOR2X1)                    0.96       0.96 f
+  adder_0/U2/Q (AO22X1)                    0.32       1.28 f
+  adder_0/c_out (fadder_0)                 0.00       1.28 f
+  adder_1/cin (fadder_7)                   0.00       1.28 f
+  adder_1/U2/Q (AO22X1)                    0.14       1.42 f
+  adder_1/c_out (fadder_7)                 0.00       1.42 f
+  adder_2/cin (fadder_6)                   0.00       1.42 f
+  adder_2/U2/Q (AO22X1)                    0.14       1.56 f
+  adder_2/c_out (fadder_6)                 0.00       1.56 f
+  adder_3/cin (fadder_5)                   0.00       1.56 f
+  adder_3/U2/Q (AO22X1)                    0.14       1.69 f
+  adder_3/c_out (fadder_5)                 0.00       1.69 f
+  adder_4/cin (fadder_4)                   0.00       1.69 f
+  adder_4/U2/Q (AO22X1)                    0.14       1.83 f
+  adder_4/c_out (fadder_4)                 0.00       1.83 f
+  adder_5/cin (fadder_3)                   0.00       1.83 f
+  adder_5/U2/Q (AO22X1)                    0.14       1.97 f
+  adder_5/c_out (fadder_3)                 0.00       1.97 f
+  adder_6/cin (fadder_2)                   0.00       1.97 f
+  adder_6/U2/Q (AO22X1)                    0.14       2.11 f
+  adder_6/c_out (fadder_2)                 0.00       2.11 f
+  adder_7/cin (fadder_1)                   0.00       2.11 f
+  adder_7/U1/Q (XOR2X1)                    0.14       2.24 r
+  adder_7/sum_out (fadder_1)               0.00       2.24 r
+  sum_out[7] (out)                         0.00       2.24 r
+  data arrival time                                   2.24
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+report_area   
+ 
+****************************************
+Report : area
+Design : adder8
+Version: E-2010.12-SP2
+Date   : Wed Apr 15 16:09:47 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           25
+Number of nets:                            33
+Number of cells:                            8
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       8
+
+Combinational area:        317.032005
+Noncombinational area:       0.000000
+Net Interconnect area:      10.188293  
+
+Total cell area:           317.032005
+Total area:                327.220298
+1
+write -format verilog -hierarchy -output adder8.gate.v
+Writing verilog file '/nfs/stak/students/s/sawaspar/ECE474/HW1/adder8.gate.v'.
+1
+write list adder8_gate.list
+Error: extra positional option 'adder8_gate.list' (CMD-012)
+quit
+Information: Defining new variable 'compile_group_pull_control_logic'. (CMD-041)
+
+Thank you...
+
+
+____________________________________________________________________________
+
+
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do temp_trans.do -c -quiet -t 1ps adder8 
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do temp_trans.do 
+# Missing signal name or pattern
+
+
+____________________________________________________________________________
+
+
+
+___________________________END OF RUN_________________________________
+
+

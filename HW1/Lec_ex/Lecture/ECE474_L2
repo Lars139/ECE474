@@ -1,0 +1,46 @@
+L2
+
+If the 'comp_lib.sh' is to complie/import module from the lib,
+why does 'vlog' --> 'design_vision-xg' works on part1?  
+(Ideally, it shoudln't)
+
+What is the correct order to complie it twice? 
+  1) Run ./comp_lib.sh
+  2) then follow L1?
+_________________________________________________________________________
+Quiz
+- vlog compiles from the SOURCE FILE to be an executable
+- When you call stimulate, it is stimulate on the MODULE
+- Why you can't program HDL as other C/Jave programming?
+	B/C everything is not consequencial, rather simultaneous.
+_________________________________________________________________________
+L2
+OVERVIEW: 
+
+fadder.sv-> dc.shell-> fadder.gate.v-> 'vlog <gate>' -> 'vsim <module>'
+			(gate prims)      (compile)    (stimulate)
+
+*.v file is a verilog file
+verilog can be nested. 
+Thus sometime when you want to compile a module, you have to compile 
+the whole library first. It is  b/c when you use design_vision-xg to create
+*.gate.v it actually contains sub-modules from the library which needs to 
+be built. (You only need to do this once for the entire project)
+
+now if you want to use 'vsim' from /work (dir) you have to
+'vlog fadder.gate.v'
+
+design_vision-xg -f <TCL-script>
+	takes TCL-script and synthesize the circuit
+
+After you get the *.gate.v, it has XOR, OR gates. Now you have to compiles those micro-blog from the lib (so you have to compile the lib first before you can stimulator)
+
+________________________________________________________________________
+TERMINOLOGY IN design_vision-xg 
+
+slack 
+	how much slack you have in the timing (+ is good, - is bad)
+	combinational area -- the area that is relatively to the NAND GATE
+
+combinatorial area
+	a comparative area size in (um^2) of a 2-input NAND cell

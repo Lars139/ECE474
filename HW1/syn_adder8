@@ -1,0 +1,8 @@
+read_sverilog fadder.sv 
+read_sverilog adder8.sv
+compile
+report_timing
+report_area   
+write -format verilog -hierarchy -output adder8.gate.v
+write list adder8_gate.list
+quit

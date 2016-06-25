@@ -1,0 +1,4 @@
+view signals
+add wave -r /*
+run 8000ns
+

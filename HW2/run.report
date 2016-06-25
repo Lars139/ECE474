@@ -1,0 +1,308 @@
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+
+____________________________________________________________________________
+
+
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do temp_trans.do -c -quiet -t 1ps alu 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do temp_trans.do 
+# Missing signal name or pattern
+
+
+____________________________________________________________________________
+
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+           Version E-2010.12-SP2 for linux -- Feb 25, 2011
+               Copyright (c) 1988-2011 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+read_sverilog ./rtl_src/alu.sv
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/gtech.db'
+Loading db file '/usr/local/apps/synopsys/current_synthesis/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Loading sverilog file '/nfs/stak/students/s/sawaspar/ECE474/HW2/rtl_src/alu.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /nfs/stak/students/s/sawaspar/ECE474/HW2/rtl_src/alu.sv
+
+Statistics for case statements in always block at line 28 in file
+	'/nfs/stak/students/s/sawaspar/ECE474/HW2/rtl_src/alu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            29            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Current design is now '/nfs/stak/students/s/sawaspar/ECE474/HW2/rtl_src/alu.db:alu'
+Loaded 1 design.
+Current design is 'alu'.
+alu
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | E-2010.12-DWBB_201012.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 5 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'alu'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'alu' has no optimization constraints set. (OPT-108)
+Information: Total 0 isolation cells are inserted. (UPF-214)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'alu_DW01_addsub_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'alu'
+  Mapping 'alu'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1840.9      0.00       0.0       0.0                          
+    0:00:02    1840.9      0.00       0.0       0.0                          
+    0:00:02    1840.9      0.00       0.0       0.0                          
+    0:00:02    1840.9      0.00       0.0       0.0                          
+    0:00:02    1840.9      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+    0:00:02    1714.7      0.00       0.0       0.0                          
+Loading db file '/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db'
+
+  Optimization Complete
+  ---------------------
+1
+report_timing
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : alu
+Version: E-2010.12-SP2
+Date   : Fri Apr 24 00:04:15 2015
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+  Startpoint: opcode[0] (input port)
+  Endpoint: alu_zero (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  alu                8000                  saed90nm_typ
+  alu_DW01_addsub_0  8000                  saed90nm_typ
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  opcode[0] (in)                           0.00       0.00 f
+  U159/QN (INVX0)                          0.08       0.08 r
+  U143/Q (XNOR2X1)                         0.14       0.22 f
+  U142/QN (NAND2X0)                        0.33       0.54 r
+  U141/Q (OR2X1)                           0.17       0.71 r
+  U137/QN (NAND3X0)                        0.05       0.76 f
+  r30/B[0] (alu_DW01_addsub_0)             0.00       0.76 f
+  r30/U8/Q (XOR2X1)                        0.15       0.91 r
+  r30/U1_0/CO (FADDX1)                     0.15       1.06 r
+  r30/U1_1/CO (FADDX1)                     0.13       1.19 r
+  r30/U1_2/CO (FADDX1)                     0.13       1.32 r
+  r30/U1_3/CO (FADDX1)                     0.13       1.45 r
+  r30/U1_4/CO (FADDX1)                     0.13       1.58 r
+  r30/U1_5/CO (FADDX1)                     0.13       1.71 r
+  r30/U1_6/CO (FADDX1)                     0.13       1.84 r
+  r30/U1_7/S (FADDX1)                      0.25       2.09 r
+  r30/SUM[7] (alu_DW01_addsub_0)           0.00       2.09 r
+  U120/Q (MUX21X1)                         0.10       2.19 r
+  U99/Q (MUX21X1)                          0.09       2.28 r
+  U97/Q (MUX41X1)                          0.15       2.43 r
+  U124/Q (OR4X1)                           0.13       2.56 r
+  U122/QN (NOR2X0)                         0.04       2.60 f
+  alu_zero (out)                           0.00       2.60 f
+  data arrival time                                   2.60
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+report_area
+ 
+****************************************
+Report : area
+Design : alu
+Version: E-2010.12-SP2
+Date   : Fri Apr 24 00:04:15 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/synopsys/models/saed90nm_typ_pg.db)
+
+Number of ports:                           30
+Number of nets:                           146
+Number of cells:                          117
+Number of combinational cells:            116
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                         20
+Number of references:                      14
+
+Combinational area:       1626.689027
+Noncombinational area:       0.000000
+Net Interconnect area:      87.972230  
+
+Total cell area:          1626.689027
+Total area:               1714.661257
+1
+write list alu-gate.list
+Error: extra positional option 'alu-gate.list' (CMD-012)
+write -format verilog -hierarchy -output alu.gate.v
+Writing verilog file '/nfs/stak/students/s/sawaspar/ECE474/HW2/alu.gate.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+Information: Defining new variable 'compile_group_pull_control_logic'. (CMD-041)
+
+Thank you...
+
+
+____________________________________________________________________________
+
+
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module alu_DW01_addsub_0
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+
+____________________________________________________________________________
+
+
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do temp_trans.do -c -quiet -t 1ps alu 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ./alu.gate.v(56): [TFMPC] - Too few port connections for 'r30'.  Expected 6, found 5.
+# ** Warning: ./alu.gate.v(56): [TFMPC] - Missing connection for port 'CO'.
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.12.2.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do temp_trans.do 
+# Missing signal name or pattern
+
+
+____________________________________________________________________________
+
+
+
+______________________________END OF RUN____________________________________
+
+

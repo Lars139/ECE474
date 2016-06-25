@@ -1,0 +1,66 @@
+
+ [1;34mChecking the source files... [0m
+ Source File Exist:  gcd_rtl_skel.sv
+ Source File Exist:  tb.sv
+
+ [1;34mCompiling gcd_rtl_skel.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module gcd
+
+Top level modules:
+	gcd
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling tb.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+
+____________________________________________________________________________
+
+
+Reading /nfs/guille/a2/rh80apps/mti/6.6a/modeltech/tcl/vsim/pref.tcl 
+
+# 6.6a
+
+# vsim -do dofile -c -quiet -novopt tb 
+# //  ModelSim SE 6.6a Mar 19 2010 Linux 2.6.32-504.23.4.el6.x86_64
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /nfs/stak/students/s/sawaspar/ECE474/HW4/work.tb
+# Refreshing /nfs/stak/students/s/sawaspar/ECE474/HW4/work.gcd
+# ** Warning: (vsim-PLI-3691) tb.sv(45): Expected a system task, not a system function '$fscanf'.
+#         Region: /tb
+# do dofile 
+# a_in=      3430   b_in=      2060   result=        10
+# a_in=      3435   b_in=   2342340   result=        15
+# a_in=     13435   b_in=   3434290   result=         5
+# a_in=  23232502   b_in= 343535354   result=         2
+# a_in=      5975   b_in=   3859034   result=         1
+# a_in=      1930   b_in=        34   result=         2
+# a_in=        39   b_in=        13   result=        13
+# a_in=         9   b_in=         3   result=         3
+# a_in=        14   b_in=        92   result=         2
+
+
+____________________________________________________________________________
+
+
+
+______________________________END OF RUN____________________________________
+
+

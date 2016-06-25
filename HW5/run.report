@@ -1,0 +1,115 @@
+
+ [1;34mChecking the source files... [0m
+ Source File Exist:  ram_addr_module.sv
+ Source File Exist:  averager_moduel.sv
+ Source File Exist:  ctrl_2MHz_module.sv
+ Source File Exist:  fifo_module.sv
+ Source File Exist:  ctrl_50MHz_module.sv
+ Source File Exist:  shift_reg_module.sv
+ Source File Exist:  tas.sv
+ Source File Exist:  tb.sv
+
+ [1;34mCompiling ram_addr_module.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module ram_addr
+
+Top level modules:
+	ram_addr
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling averager_moduel.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module averager
+
+Top level modules:
+	averager
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling ctrl_2MHz_module.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module ctrl_2MHz
+
+Top level modules:
+	ctrl_2MHz
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling fifo_module.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling ctrl_50MHz_module.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module ctrl_50MHz
+
+Top level modules:
+	ctrl_50MHz
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling shift_reg_module.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module shift_reg
+
+Top level modules:
+	shift_reg
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling tas.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module tas
+
+Top level modules:
+	tas
+
+
+____________________________________________________________________________
+
+
+
+ [1;34mCompiling tb.sv... [0m
+Model Technology ModelSim SE vlog 6.6a Compiler 2010.03 Mar 19 2010
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+
+____________________________________________________________________________
+
+
+
+
+____________________________________________________________________________
+
+
+
+______________________________END OF RUN____________________________________
+
+

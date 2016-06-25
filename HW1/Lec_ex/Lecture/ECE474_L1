@@ -1,0 +1,66 @@
+L1
+__________________________________________________________________________
+UNIX SYNTHESIS PROCEDURE
+
+curl <url> > <filename>
+	get a file from a src url
+
+vlib <dir>
+	create a working directory which links w/ vlog
+
+vlog <sverilog-file>
+	compile a sverilog file (generating an executable)
+	File Extension: *.sv
+
+vsim -novopt -do <transcript> <module>
+	run a stimulation on the module(executable from vlog)
+	File Extension: <transcript>  -- *.do.save
+		        <module>      -- NONE
+
+design_vision-xg -f <TCL-Synopsys-Script>
+	run a stimulation/build a gate implementation of the vlog
+	File Extension: <script>  --  NONE
+			<output>  -- *.gate.v
+__________________________________________________________________________
+EXMAPLE OF sverilog-file (.sv):
+
+//-------------------------------------------------------------------
+//one bit full adder
+//-------------------------------------------------------------------
+  module fadder(
+    input a,         //data in a
+    input b,         //data in b
+    input cin,       //carry in
+    output sum_out,  //sum output
+    output c_out     //carry output
+    );
+    wire c1, c2, c3; //wiring needed
+
+    assign sum_out = a ^ b ^ cin;   //half adder (XOR gate)
+    assign c1      = a * cin;       //carry condition 1
+    assign c2      = b * cin;       //carry condition 2
+    assign c3      = a * b;         //carry condition 3
+    assign c_out   = (c1 + c2 + c3);
+
+  endmodule
+__________________________________________________________________________
+EXAMPLE OF transcript ( ):
+
+    view signals
+    add wave -r /*
+
+    force a 0         
+    force b 0         
+    force cin 0         
+    run 100ns
+__________________________________________________________________________
+EXAMPLE OF TCL-Synopsys-Scrip ( ):
+ 
+    read_sverilog  fadder.sv
+    compile
+    report_timing
+    report_area
+    write -format verilog -hierarchy -output fadder.gate.v
+    #quit!
+__________________________________________________________________________
+

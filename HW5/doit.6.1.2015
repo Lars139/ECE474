@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#make result directories if they don't exist
+
+if [ ! -s logs ];    then
+  mkdir logs 
+fi
+if [ ! -s reports ]; then
+  mkdir reports
+fi
+if [ ! -s work ];    then
+  vlib work 
+fi
+
+#remove any old results from previous runs 
+rm logs/*
+rm reports/*
+
+echo "***** Compile synthesis library into work *****"
+synop_lib="/nfs/guille/a1/cadlibs/synop_lib/SAED_EDK90nm/Digital_Standard_Cell_Library/verilog"
+vlog -quiet  $synop_lib/*  -work work
+
+
+#echo "***** Synthesizing RTL design *****"
+dc_shell-xg-t -f dc_syn    > logs/synth_log
+
+echo " "
+echo "***** Checking for latches in synthesized design"
+echo " "
+#check synthesis results before going further
+grep --ignore-case "LATCH*"  reports/cells_used >  reports/rtl_synth_error
+grep --ignore-case "LASR*"   reports/cells_used >  reports/rtl_synth_error
+grep --ignore-case "LAR*"    reports/cells_used >  reports/rtl_synth_error
+grep --ignore-case "LAS*"    reports/cells_used >  reports/rtl_synth_error
+
+
+#check for errors in synthesis from latches being included
+if [ -s reports/rtl_synth_error ] ; then
+  echo " "
+  echo "*** Latches Found after Synthesis ***"
+  echo " "
+  exit 
+else
+  echo " "
+  echo "*** No Latches Found after Synthesis ***"
+  echo " "
+fi
+
+exit

@@ -1,0 +1,254 @@
+|top
+reset_n => reset_n.IN1
+clk_50 => clk_50.IN1
+enable_low <= <GND>
+enable_high <= <VCC>
+mil_time => mil_time.IN1
+raw_set_clk_button => raw_set_clk_button.IN1
+raw_set_sec_button => raw_set_sec_button.IN1
+raw_set_min_button => raw_set_min_button.IN1
+raw_set_hrs_button => raw_set_hrs_button.IN1
+clk_10khz <= newpll:newpll_0.c0
+segment_data[0] <= clock:clock_inst0.segment_data
+segment_data[1] <= clock:clock_inst0.segment_data
+segment_data[2] <= clock:clock_inst0.segment_data
+segment_data[3] <= clock:clock_inst0.segment_data
+segment_data[4] <= clock:clock_inst0.segment_data
+segment_data[5] <= clock:clock_inst0.segment_data
+segment_data[6] <= clock:clock_inst0.segment_data
+digit_select[0] <= clock:clock_inst0.digit_select
+digit_select[1] <= clock:clock_inst0.digit_select
+digit_select[2] <= clock:clock_inst0.digit_select
+
+
+|top|clock:clock_inst0
+reset_n => sec_cntr:sec_cntr_0.reset_n
+reset_n => min_cntr:min_cntr_0.reset_n
+reset_n => hr_cntr:hr_cntr_0.reset_n
+reset_n => digit_sel:digit_sel_0.reset_n
+clk_1sec => sec_cntr:sec_cntr_0.clk_1sec
+clk_1sec => min_cntr:min_cntr_0.clk_1sec
+clk_1sec => hr_cntr:hr_cntr_0.clk_1sec
+clk_1sec => digit_sel:digit_sel_0.clk_1sec
+clk_1ms => digit_sel:digit_sel_0.clk_1ms
+mil_time => hr_cntr:hr_cntr_0.mil_time
+raw_set_clk_button => ~NO_FANOUT~
+raw_set_hrs_button => ~NO_FANOUT~
+raw_set_min_button => ~NO_FANOUT~
+raw_set_sec_button => ~NO_FANOUT~
+segment_data[0] <= seven_seg_dec:seven_seg_dec_0.segment_data[0]
+segment_data[1] <= seven_seg_dec:seven_seg_dec_0.segment_data[1]
+segment_data[2] <= seven_seg_dec:seven_seg_dec_0.segment_data[2]
+segment_data[3] <= seven_seg_dec:seven_seg_dec_0.segment_data[3]
+segment_data[4] <= seven_seg_dec:seven_seg_dec_0.segment_data[4]
+segment_data[5] <= seven_seg_dec:seven_seg_dec_0.segment_data[5]
+segment_data[6] <= seven_seg_dec:seven_seg_dec_0.segment_data[6]
+digit_select[0] <= digit_sel:digit_sel_0.digit_select[0]
+digit_select[1] <= digit_sel:digit_sel_0.digit_select[1]
+digit_select[2] <= digit_sel:digit_sel_0.digit_select[2]
+
+
+|top|clock:clock_inst0|sec_cntr:sec_cntr_0
+reset_n => cntr[0].ACLR
+reset_n => cntr[1].ACLR
+reset_n => cntr[2].ACLR
+reset_n => cntr[3].ACLR
+reset_n => cntr[4].ACLR
+reset_n => cntr[5].ACLR
+clk_1sec => cntr[0].CLK
+clk_1sec => cntr[1].CLK
+clk_1sec => cntr[2].CLK
+clk_1sec => cntr[3].CLK
+clk_1sec => cntr[4].CLK
+clk_1sec => cntr[5].CLK
+clk_1sec => always1.IN1
+f_1min <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock:clock_inst0|min_cntr:min_cntr_0
+reset_n => cntr[0].ACLR
+reset_n => cntr[1].ACLR
+reset_n => cntr[2].ACLR
+reset_n => cntr[3].ACLR
+reset_n => cntr[4].ACLR
+reset_n => cntr[5].ACLR
+clk_1sec => cntr[0].CLK
+clk_1sec => cntr[1].CLK
+clk_1sec => cntr[2].CLK
+clk_1sec => cntr[3].CLK
+clk_1sec => cntr[4].CLK
+clk_1sec => cntr[5].CLK
+f_1min => always0.IN1
+f_1min => cntr.OUTPUTSELECT
+f_1min => cntr.OUTPUTSELECT
+f_1min => cntr.OUTPUTSELECT
+f_1min => cntr.OUTPUTSELECT
+f_1min => cntr.OUTPUTSELECT
+f_1min => cntr.OUTPUTSELECT
+f_1min => always1.IN1
+f_1hr <= always1.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_t[0] <= b_min_t.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_t[1] <= b_min_t.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_t[2] <= b_min_t.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_u[0] <= b_min_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_u[1] <= b_min_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_u[2] <= b_min_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_min_u[3] <= b_min_u.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock:clock_inst0|hr_cntr:hr_cntr_0
+reset_n => cntr[0].ACLR
+reset_n => cntr[1].ACLR
+reset_n => cntr[2].ACLR
+reset_n => cntr[3].ACLR
+reset_n => cntr[4].ACLR
+reset_n => cntr[5].ACLR
+clk_1sec => cntr[0].CLK
+clk_1sec => cntr[1].CLK
+clk_1sec => cntr[2].CLK
+clk_1sec => cntr[3].CLK
+clk_1sec => cntr[4].CLK
+clk_1sec => cntr[5].CLK
+f_1min => ~NO_FANOUT~
+f_1hr => always0.IN1
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => cntr.OUTPUTSELECT
+f_1hr => always1.IN1
+mil_time => b_cntr[5].OUTPUTSELECT
+mil_time => b_cntr[4].OUTPUTSELECT
+mil_time => b_cntr[3].OUTPUTSELECT
+mil_time => b_cntr[2].OUTPUTSELECT
+mil_time => always4.IN1
+f_1day <= always1.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_t[0] <= b_hr_t.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_t[1] <= b_hr_t.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_u[0] <= b_hr_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_u[1] <= b_hr_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_u[2] <= b_hr_u.DB_MAX_OUTPUT_PORT_TYPE
+dec_hr_u[3] <= b_hr_u.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock:clock_inst0|digit_sel:digit_sel_0
+reset_n => ds_ps~3.DATAIN
+clk_1ms => ds_ps~1.DATAIN
+clk_1sec => Selector3.IN9
+dec_min_t[0] => Selector3.IN0
+dec_min_t[1] => Selector2.IN1
+dec_min_t[2] => Selector1.IN2
+dec_min_u[0] => Selector3.IN1
+dec_min_u[1] => Selector2.IN2
+dec_min_u[2] => Selector1.IN3
+dec_min_u[3] => Selector0.IN3
+dec_hr_t[0] => Selector3.IN2
+dec_hr_t[1] => Selector2.IN3
+dec_hr_u[0] => Selector3.IN3
+dec_hr_u[1] => Selector2.IN4
+dec_hr_u[2] => Selector1.IN4
+dec_hr_u[3] => Selector0.IN4
+dec_7seg[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+dec_7seg[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+dec_7seg[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+dec_7seg[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+digit_select[0] <= b_dg_sel.DB_MAX_OUTPUT_PORT_TYPE
+digit_select[1] <= b_dg_sel.DB_MAX_OUTPUT_PORT_TYPE
+digit_select[2] <= digit_select[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clock:clock_inst0|seven_seg_dec:seven_seg_dec_0
+dec_7seg[0] => Decoder0.IN3
+dec_7seg[1] => Decoder0.IN2
+dec_7seg[2] => Decoder0.IN1
+dec_7seg[3] => Decoder0.IN0
+segment_data[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segment_data[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|newpll:newpll_0
+areset => areset.IN1
+inclk0 => sub_wire4[0].IN1
+c0 <= altpll:altpll_component.clk
+locked <= altpll:altpll_component.locked
+
+
+|top|newpll:newpll_0|altpll:altpll_component
+inclk[0] => newpll_altpll:auto_generated.inclk[0]
+inclk[1] => newpll_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => newpll_altpll:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= newpll_altpll:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|top|newpll:newpll_0|altpll:altpll_component|newpll_altpll:auto_generated
+areset => pll_lock_sync.ACLR
+areset => pll1.ARESET
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
+
+

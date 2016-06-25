@@ -1,0 +1,35 @@
+7d6
+< 
+11c10
+< reg start, done, data_en;
+---
+> reg data_ena;
+13c12,13
+< reg [7:0] data_out;
+---
+> reg [7:0] to_fifo_data;
+> 
+31,32d30
+<     serial_data='x;
+<     start=1'b0;
+34d31
+< 	 data_en = 1;
+38c35
+< shiftReg shiftReg_0(.*); //instantiate the gcd unit
+---
+> shift_reg shift_reg_0(.*); //instantiate the gcd unit
+44,45c41,42
+<    $fscanf(input_file,"%d", serial_data);
+<    start=1'b1;
+---
+>    $fscanf(input_file,"%d",  serial_data);
+>    data_ena = '1;
+47,49c44,45
+<    data_en=1'b1;
+<    while(done != 1'b1) #(CYCLE);
+<    $display ("serial_data=%d   data_out=%d", serial_data, data_out);
+---
+>    while(1) #(CYCLE);
+>    $display ("to_fifo_data= %d ", to_fifo_data);
+53a50
+> $fclose(output_file);
